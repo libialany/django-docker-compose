@@ -78,7 +78,7 @@ ALLOWED_HOSTS.extend(
         )
 )
 
-``
+```
 
 ### databases set up
 
