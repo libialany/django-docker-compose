@@ -1,0 +1,12 @@
+.env
+
+ENV
+
+
+
+docker-compose
+
+.pyre
+
+/data
+
