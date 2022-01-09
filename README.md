@@ -239,7 +239,7 @@ if settings.DEBUG:
 
 ```
 docker-compose  run --rm app sh -c "python manage.py createsuperuser"
-``
+```
 
 ### setting the proxy 
 
@@ -253,8 +253,6 @@ docker-compose  run --rm app sh -c "python manage.py createsuperuser"
 FROM nginxinc/nginx-unprivileged:1-alphine
 
 #
-
-
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 COPY ./uwsgi_params /etc/nginx/uwsgi_params
 COPY ./run.sh /run.sh
@@ -272,7 +270,8 @@ CMD [ "/run.sh" ]
 ```
 create default.conf.tpl to configure nginx
 
-```server {
+```
+server {
         listen ${LISTEN_PORT};
 	# first location
         location /static {
@@ -287,7 +286,8 @@ create default.conf.tpl to configure nginx
                 client_max_body_size    10M;
         }
 
-}```
+}
+```
 
 create a run.sh
 
